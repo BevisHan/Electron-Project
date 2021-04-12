@@ -1,0 +1,310 @@
+[
+    {
+        "id": "UnfoldSidebar",
+        "window": {
+            "type": "SIDEBAR",
+            "size": "UNFOLD"
+        },
+        "loadType": "FILE",
+        "loadPath": "ui/index.html",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "FoldSidebar",
+        "window": {
+            "type": "SIDEBAR",
+            "size": "FOLD"
+        },
+        "loadType": "FILE",
+        "loadPath": "ui/index.html",
+        "isCloseOther": true,
+        "moduleId": ""
+    },
+    {
+        "id": "Menu",
+        "window": {
+            "type": "TOOLBAR",
+            "size": ""
+        },
+        "loadType": "FILE",
+        "loadPath": "ui/menu.html",
+        "isCloseOther": false,
+        "moduleId": "menu"
+    },
+    {
+        "id": "ClassroomTeaching.Brainstorming",
+        "window": {
+            "type": "REVIEW",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Brainstorming",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Cooperation.Content",
+        "window": {
+            "type": "REVIEW",
+            "size": "SIDEBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Cooperation.Content",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Cooperation",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Cooperation",
+        "isCloseOther": true,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Error",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Error",
+        "isCloseOther": true,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Group",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Group",
+        "isCloseOther": true,
+        "moduleId": "menu"
+    },
+    {
+        "id": "ClassroomTeaching.Material",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Material",
+        "isCloseOther": true,
+        "moduleId": "file"
+    },
+    {
+        "id": "ClassroomTeaching.Notation",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Notation",
+        "isCloseOther": true,
+        "moduleId": "mark"
+    },
+    {
+        "id": "ClassroomTeaching.Portal",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Portal",
+        "isCloseOther": true,
+        "moduleId": "power"
+    },
+    {
+        "id": "ClassroomTeaching.Practice.Brief",
+        "window": {
+            "type": "BRIEF",
+            "size": "CONTENT"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Practice.Brief",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Practice",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Practice",
+        "isCloseOther": true,
+        "moduleId": "interaction"
+    },
+    {
+        "id": "ClassroomTeaching.Screen.TeacherScreen.Controlbar",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Screen.TeacherScreen",
+        "isCloseOther": true,
+        "moduleId": "screen"
+    },
+    {
+        "id": "ClassroomTeaching.Screen.TeacherScreen.FullScreen",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Screen.TeacherScreen",
+        "isCloseOther": true,
+        "moduleId": "screen"
+    },
+    {
+        "id": "ClassroomTeaching.Students.Detail",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Students.Detail",
+        "isCloseOther": true,
+        "moduleId": "student"
+    },
+    {
+        "id": "ClassroomTeaching.Students.Score",
+        "window": {
+            "type": "TOOLBAR",
+            "size": ""
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Students.Score",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Discussion",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Discussion",
+        "isCloseOther": true,
+        "moduleId": "group_discuss"
+    },
+    {
+        "id": "ClassroomTeaching.Discussion.GroupDiscuss.Controlbar",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Discussion.GroupDiscuss",
+        "isCloseOther": false,
+        "moduleId": "group_discuss"
+    },
+    {
+        "id": "ClassroomTeaching.Discussion.GroupDiscuss.FullScreen",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Discussion.GroupDiscuss",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Practice.Choice.Controlbar",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Practice.Choice",
+        "isCloseOther": true,
+        "moduleId": "interaction"
+    },
+    {
+        "id": "ClassroomTeaching.Practice.Choice.FullScreen",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Practice.Choice",
+        "isCloseOther": true,
+        "moduleId": "interaction"
+    },
+    {
+        "id": "ClassroomTeaching.Practice.Text.Controlbar",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Practice.Text",
+        "isCloseOther": true,
+        "moduleId": "interaction"
+    },
+    {
+        "id": "ClassroomTeaching.Practice.Text.FullScreen",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Practice.Text",
+        "isCloseOther": true,
+        "moduleId": "interaction"
+    },
+    {
+        "id": "ClassroomTeaching.Discussion.Review.Controlbar",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Discussion.Review",
+        "isCloseOther": false,
+        "moduleId": "group_discuss"
+    },
+    {
+        "id": "ClassroomTeaching.Discussion.Review.FullScreen",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Discussion.Review",
+        "isCloseOther": false,
+        "moduleId": "group_discuss"
+    },
+    {
+        "id": "ClassroomTeaching.LessonReport",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.LessonReport",
+        "isCloseOther": true,
+        "moduleId": "menu"
+    },
+    {
+        "id": "ClassroomTeaching.Practice.Timer",
+        "window": {
+            "type": "BRIEF",
+            "size": "CARD"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Practice.Timer",
+        "isCloseOther": false,
+        "moduleId": ""
+    }
+]

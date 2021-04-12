@@ -1,0 +1,30 @@
+<div class="lui-dialog-standard" role="dialog" layout="column">
+    <div flex="nogrow" class="lui-dialog-header" layout="row" layout-align="space-between center">
+        <div class="lui-dialog-title">
+            <span class="message-type-icon">
+                <i class="lic lic-info-circle"></i>
+            </span>
+            <span>修改名称</span>
+        </div>
+    </div>
+    <div class="flex-auto lui-dialog-body">
+        <div class="lui-form-container">
+            <form class="lui-form-container" ng-submit="$event.preventDefault()">
+                <lui-form-group>
+                    <label class="lui-form-header">屏幕名称</label>
+                    <div class="lui-form-body">
+                        <input type="text" name="ScreenName" class="lui-form-control" ng-model="name" maxlength="6"
+                            autocomplete="off" placeholder="请输入"/>
+                    </div>
+                </lui-form-group>
+            </form>
+        </div>
+    </div>
+    <div class="lui-dialog-actions" layout="row">
+        <span class="flex-auto"></span>
+        <div class="lui-button-list">
+            <lui-button class="color-primary" ng-click="cancel()" aria-label="cancel">取消</lui-button>
+            <lui-button class="color-primary lui-primary" ng-click="confirm()" aria-label="confirm">确认</lui-button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="CDN/Angular/extend/angular-material.min.css" />
+    <link rel="stylesheet" type="text/css" href="Framework/LINDGE.UI/LINDGE-UI-Core-1.0.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="Framework/LINDGE.UI/LINDGE-UI-Standard-1.0.0.min.css" />
+
+    <link rel="stylesheet" href="index.css" />
+    <title>凌极智慧教室服务端设置工具</title>
+</head>
+<body ng-app="Config.Tool" ng-controller="MainCtrl">
+    <div class="top-container" style="-webkit-app-region: drag">
+        <div class="left-text">
+            <img ng-src="Image/云朵.ico"/>
+            <div>凌极智慧教室服务端设置工具</div>
+        </div>
+        <div class="right-text" ng-click="exit()" style="-webkit-app-region: no-drag">
+            <img ng-src="Image/退出.png"/>
+            <div>退出</div>
+        </div>
+    </div>
+    <div class="main-container narrow-scroll" ng-cloak>
+        <div class="title">
+            <div class="title-divide-line"></div>
+            <div>服务端设置工具</div>
+        </div>
+        <md-divider></md-divider>
+        <div class="lui-form-container" id="cover-width" ng-if="!isLoading">
+            <lui-form-group>
+                <label class="lui-form-header">许可证文件</label>
+                <div class="lui-form-body layout-row">
+                    <input type="text" name="fileName" class="lui-form-control" ng-model="serverConfig.LicenseFileName" ng-bind="serverConfig.LicenseFileName"
+                        autocomplete="off" placeholder="请选择许可证文件" ng-disabled="true"/>
+                    <lui-button type="submit" class="color-primary lui-primary" ng-click="browseFile()">浏览文件
+                    </lui-button>
+                </div>
+            </lui-form-group>
+        </div>
+        <div class="text-font" ng-if="!isLoading">网络</div>
+        <md-divider class="cover-divide-margin" ng-if="!isLoading"></md-divider>
+        <div class="lui-form-container" id="cover-width" ng-if="!isLoading">
+            <lui-form-group>
+                <label class="lui-form-header">服务器IP</label>
+                <div class="lui-form-body layout-row">
+                    <md-select class="lui-form-control" ng-model="serverConfig.ServerIPAddress"
+                        placeholder="请选择服务器IP">
+                        <md-option ng-repeat="item in serverIPAddress" ng-value="item">{{item}}</md-option>
+                    </md-select>
+                </div>
+            </lui-form-group>
+            <lui-form-group>
+                <label class="lui-form-header">无线SSID</label>
+                <div class="lui-form-body layout-row">
+                    <input type="text" name="SSID" class="lui-form-control" ng-model="serverConfig.WifiSSID" ng-bind="serverConfig.WifiSSID"
+                        autocomplete="off" placeholder="请输入无线路由器的SSID"/>
+                </div>
+            </lui-form-group>
+            <lui-form-group>
+                <label class="lui-form-header">无线密码</label>
+                <div class="lui-form-body layout-row">
+                    <input type="text" name="password" class="lui-form-control" ng-model="serverConfig.WifiPassword" ng-bind="serverConfig.WifiPassword"
+                        autocomplete="off" placeholder="请输入无线路由器的密码"/>
+                </div>
+            </lui-form-group>
+        </div>
+        <div class="text-font" ng-if="!isLoading">教师/小组屏管理</div>
+        <md-divider class="cover-divide-margin" ng-if="!isLoading"></md-divider>
+        <div class="table-container cover-table-padding" ng-if="!isLoading">
+            <table class="table ng-table-rowhover" ng-table="table.getTable()">
+                <tbody>
+                    <tr ng-repeat="row in $data">
+                        <td data-title="'#'" width="129" ng-bind="row.$index"></td>
+                        <td data-title="'类型'" width="306" sortable="'Type'">
+                            <div ng-if="row.Type == 'TEACHER'">教师屏</div>
+                            <div ng-if="row.Type == 'GROUP'">小组屏</div>
+                        </td>
+                        <td data-title="'名称'" width="303" ng-bind="row.Name" sortable="'Name'"></td>
+                        <td data-title="'IP地址'" width="316" sortable="'RegistedIPAddress'">
+                            <div ng-if="row.IsRegisted" class="registered" ng-bind="row.RegistedIPAddress"></div>
+                            <div ng-if="!row.IsRegisted" class="no-register">未注册</div>
+                        </td>
+                        <td data-title="'启用'" width="403">
+                            <md-switch class="open-state-switch" id="cover-margin" ng-model="row.Enabled">
+                            </md-switch>
+                        </td>
+                        <td data-title="'操作'" width="413" style="min-width:308">
+                            <lui-button ng-click="modifyName(row)">修改名称</lui-button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <md-divider class="bottom-divide-line" ng-if="!showNoScreen&&!requestFail&&!isLoading"></md-divider>
+        <div class="lui-button-list button-margin" ng-if="!showNoScreen&&!requestFail&&!isLoading">
+            <lui-button type="submit" class="color-primary lui-primary"
+                ng-click="submit()" ng-disabled="isLoading">提交修改
+            </lui-button>
+        </div>
+        <div class="no-screen" ng-if="showNoScreen">
+            <img ng-src="Image/脱机.png"/>
+            <div>当前没有任何屏幕</div>
+        </div>
+        <div class="waiting-container" ng-show="isLoading">
+            <lui-waiting name="waiting3" waiting-exp="isLoading">
+                <lui-waiting-loading-animation animation="circular"></lui-waiting-loading-animation>
+            </lui-waiting>
+        </div>
+    </div>
+    <script>if (typeof module === 'object') {window.__module = module; module = undefined;}</script>
+    <script src="CDN/Angular/1.5/angular.js"></script>
+    <script src="CDN/Angular/1.5/angular-animate.js"></script>
+    <script src="CDN/Angular/1.5/angular-cookies.js"></script>
+    <script src="CDN/Angular/1.5/angular-loader.js"></script>
+    <script src="CDN/Angular/1.5/angular-aria.js"></script>
+    <script src="CDN/Angular/1.5/angular-messages.js"></script>
+    <script src="CDN/Angular/1.5/angular-resource.js"></script>
+    <script src="CDN/Angular/1.5/angular-ui-router.js"></script>
+    <script src="CDN/Angular/extend/angular-material.js"></script>
+    <script src="Figure.Config/Angular/RouteTable.js"></script>
+    <script src="Framework/LINDGE.Service/LINDGE-Service-1.0.0.js"></script>
+    <script src="Framework/LINDGE.UI/LINDGE-UI-Core-1.0.0.js"></script>
+    <script src="Framework/LINDGE.UI/LINDGE-UI-Standard-1.0.0.js"></script>
+    <script src="SystemConfig.js"></script>
+
+    <script src="index.js"></script>
+    <script src="popups/modify-name.js"></script>
+    <script>if (window.__module) {module = window._module;delete window.__module}</script>
+</body>
+</html>

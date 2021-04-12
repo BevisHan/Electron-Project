@@ -1,0 +1,59 @@
+{
+  "name": "SmartClassroom.Group",
+  "version": "4.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "init": "npm install --save-dev electron electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "10.1.2",
+    "electron-builder": "22.8.1"
+  },
+  "build": {
+    "appId": "SmartClassroom.Group",
+    "copyright": "Copyright © 2020 lindge",
+    "directories": {
+      "output": "./dist"
+    },
+    "files": [
+      "!cache",
+      "!.data",
+      "!.frontproj",
+      "!ui/*.scss",
+      "!**config.json",
+      "!tool"
+    ],
+    "extraResources": [
+      {
+        "from": "config.json",
+        "to": "config.json"
+      },
+      {
+        "from": "window-page.json",
+        "to": "window-page.json"
+      },
+      {
+        "from": "tool/screen-capture",
+        "to": "../tool/screen-capture"
+      }
+    ],
+    "win": {
+      "target": "zip",
+      "icon": "icon/favicon",
+      "verifyUpdateCodeSignature": true
+    }
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "log4js": "^6.3.0",
+    "timers": "^0.1.1",
+    "urlencode": "^1.1.0",
+    "uuid": "^8.3.1"
+  }
+}

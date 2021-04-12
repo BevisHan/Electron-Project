@@ -1,0 +1,11 @@
+{
+  "[version]": "1.0",
+  "name": "Shell.ClassroomTeaching.SmartClassroom.Group",
+  "server": {
+    "port": 20429,
+    "useProfile": true,
+    "useTimestamp": true
+  },
+  "include_files": [],
+  "exclude_files": []
+}

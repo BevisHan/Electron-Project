@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <!--LINDGE:meta begin-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    
+    <!--LINDGE:meta end-->
+    <!--LINDGE:style begin-->
+    <link include-type="global" rel="stylesheet" type="text/css" href="CDN/Fonts/fonts.css" />
+    <link include-type="global" rel="stylesheet" type="text/css" href="Framework/LINDGE.IconFont/lindge-icon-vivo.min.css" />
+    
+    <!--LINDGE:style end-->
+    <!--Page style begin-->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!--Page style end-->
+</head>
+<body ng-app="Shell.ClassroomTeaching.SmartClassroom.Teacher" ng-class="{'unfold-border':!isFold}" ng-controller="MainCtrl">
+    <!-- page content here -->
+    <div class="sidebar-unfold-container" ng-show="!isLoading&&!isFold" ng-clock>
+        <div class="time-container">
+            <span ng-bind="now.time"></span>
+        </div>
+        <div class="date-container">
+            <div>
+                <span ng-bind="now.date"></span>
+            </div>
+            <div>
+                <span ng-bind="now.day"></span>
+            </div>
+        </div>
+        <div></div>
+        <div class="toolbar-container">
+            <div class="teaching-prepare-container">
+                <div ng-repeat="tab in prepareTabs" class="tab-container" ng-class="{'tab-container-selected': tab.isSelected}">
+                    <div class="icon-container">
+                        <i class="lic" ng-class="{'{{tab.icon}}':true, 'selected':tab.isSelected, 'executing':tab.isExecuting}" ng-click="tab.click()"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="teaching-activity-container">
+                <div ng-repeat="tab in activityTabs" class="tab-container" ng-class="{'tab-container-selected': tab.isSelected}">
+                    <div class="icon-container">
+                        <i class="lic" ng-class="{'{{tab.icon}}':true, 'selected':tab.isSelected, 'executing':tab.isExecuting}" ng-click="tab.click()"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="logon-container">
+                <img src="image/lindge.png" ng-click="foldSidebar()"/>
+            </div>
+            <div class="tab-container" ng-class="{'tab-container-selected': !currentTab}">
+                <div class="icon-container"> 
+                    <i class="lic lic-monitor" ng-click="showDesktop()"></i> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-fold-container" ng-show="!isLoading&&isFold" ng-clock>
+        <div class="logon-container">
+            <img src="image/lindge.png" ng-click="unfoldSidebar()"/>
+        </div>
+    </div>
+    <!--LINDGE:script begin-->
+    <script include-type="global" src="CDN/Angular/1.5/angular.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-animate.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-cookies.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-loader.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-aria.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-messages.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-resource.js"></script>
+    <script include-type="global" src="Translayer/Figure.Config/Angular/RouteTable"></script>
+    <!-- <script include-type="global" src="Translayer/Figure.Config/ServerTime/global_init_time"></script> -->
+    <script include-type="global" src="Framework/LINDGE.Service/LINDGE-Service-1.0.0.js"></script>
+    
+
+    <!-- <script src="/SystemConfig.js"></script> -->
+    <!--LINDGE:script end-->
+    <!--Page script begin-->
+    <script src="service/date-time.js"></script>
+    <script src="index.js"></script>
+    <!--Page script end-->
+</body>
+</html>

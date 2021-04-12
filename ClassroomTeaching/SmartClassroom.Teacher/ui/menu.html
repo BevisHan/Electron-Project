@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <!--LINDGE:meta begin-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    
+    <!--LINDGE:meta end-->
+    <!--LINDGE:style begin-->
+    <link include-type="global" rel="stylesheet" type="text/css" href="CDN/Fonts/fonts.css" />
+    <link include-type="global" rel="stylesheet" type="text/css" href="Framework/LINDGE.IconFont/lindge-icon-vivo.min.css" />
+    
+    <!--LINDGE:style end-->
+    <!--Page style begin-->
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+    <!--Page style end-->
+</head>
+<body ng-app="Shell.ClassroomTeaching.SmartClassroom.Teacher.Menu" ng-controller="MainCtrl">
+    <!-- page content here -->
+    <div class="container" ng-clock>
+        <div class="top-container">
+            <div class="text-container">
+                <span>更多</span>
+            </div>
+            <div class="flex-auto"> </div>
+            <div class="close-container" ng-click="close()">
+                <i class="lic lic-remove-circle-fill"></i>
+                <div class="close-background-color">
+                </div>
+            </div>
+        </div>
+        <div class="content-container"> 
+            <div class="card-container" ng-repeat="card in cardInfos">
+                <div class="icon-container" ng-click="card.click()">
+                    <i class="lic" ng-class="card.icon"></i>
+                </div>
+                <div class="card-title-container">
+                    <span ng-bind="card.title"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--LINDGE:script begin-->
+    <!--LINDGE:script end-->
+    <!--Page script begin-->
+    <script include-type="global" src="CDN/Angular/1.5/angular.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-animate.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-cookies.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-loader.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-aria.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-messages.js"></script>
+    <script include-type="global" src="CDN/Angular/1.5/angular-resource.js"></script>
+    <script include-type="global" src="Translayer/Figure.Config/Angular/RouteTable"></script>
+    <script include-type="global" src="Framework/LINDGE.Service/LINDGE-Service-1.0.0.js"></script>
+
+    <script src="menu.js"></script>
+    <!--Page script end-->
+</body>
+</html>

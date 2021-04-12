@@ -1,0 +1,51 @@
+[
+    {
+        "Id": "mark",
+        "Name": "标注",
+        "Icon": "lic-pen",
+        "Index": 1001,
+        "Entrance": "ClassroomTeaching.Notation"
+    },
+    {
+        "Id": "file",
+        "Name": "文件",
+        "Icon": "lic-folder",
+        "Index": 1002,
+        "Entrance": "ClassroomTeaching.Material"
+    },
+    {
+        "Id": "screen",
+        "Name": "投屏",
+        "Icon": "lic-screen-mirror",
+        "Index": 1003,
+        "Entrance": "ClassroomTeaching.Screen.TeacherScreen.Controlbar"
+    },
+    {
+        "Id": "interaction",
+        "Name": "互动",
+        "Icon": "lic-palm",
+        "Index": 2001,
+        "Entrance": "ClassroomTeaching.Practice"
+    },
+    {
+        "Id": "group_discuss",
+        "Name": "分组讨论",
+        "Icon": "lic-chat",
+        "Index": 3001,
+        "Entrance": "ClassroomTeaching.Discussion"
+    },
+    {
+        "Id": "grouping",
+        "Name": "分组设置",
+        "Icon": "lic-male-circle",
+        "Index": 4001,
+        "Entrance": "ClassroomTeaching.Group"
+    },
+    {
+        "Id": "lesson_record",
+        "Name": "课堂记录",
+        "Icon": "lic-document-list",
+        "Index": 4002,
+        "Entrance": "ClassroomTeaching.LessonReport"
+    }
+]

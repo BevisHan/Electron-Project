@@ -1,0 +1,16 @@
+{
+    "IsReceiveBroadcast": false,
+    "BroadcastUrl": "https://www.baidu.com/",
+    "IsDiscussing": false,
+    "DiscussionInfo": {
+        "DiscussionId": "BHC_921F3934F50845C8ABEA83A1A2706246",
+        "Type": "BRAINSTORMING",
+        "State": "PROGRESSING"
+    },
+    "SceneInfo": {
+        "SceneId": "S_3E9C54369CC947978447ACF4C04D82FD",
+        "LessonId": "L_83679E27B63F4173BA5EA80A9729850C"
+    },
+    "IsMarking": false,
+    "IsReceiveScreenProjection": false
+}

@@ -1,0 +1,123 @@
+[
+    {
+        "id": "UnfoldSidebar",
+        "window": {
+            "type": "SIDEBAR",
+            "size": "UNFOLD"
+        },
+        "loadType": "FILE",
+        "loadPath": "ui/index.html",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "FoldSidebar",
+        "window": {
+            "type": "SIDEBAR",
+            "size": "FOLD"
+        },
+        "loadType": "FILE",
+        "loadPath": "ui/index.html",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Brainstorming",
+        "window": {
+            "type": "DISCUSS",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Brainstorming",
+        "isCloseOther": true,
+        "moduleId": "group_discuss"
+    },
+    {
+        "id": "ClassroomTeaching.Cooperation.Content",
+        "window": {
+            "type": "DISCUSS",
+            "size": "SIDEBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Cooperation.Content",
+        "isCloseOther": false,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Cooperation",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Cooperation",
+        "isCloseOther": true,
+        "moduleId": "group_discuss"
+    },
+    {
+        "id": "ClassroomTeaching.Error",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Error",
+        "isCloseOther": true,
+        "moduleId": ""
+    },
+    {
+        "id": "ClassroomTeaching.Material",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Material",
+        "isCloseOther": true,
+        "moduleId": "file"
+    },
+    {
+        "id": "ClassroomTeaching.Notation",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Notation",
+        "isCloseOther": true,
+        "moduleId": "mark"
+    },
+    {
+        "id": "ClassroomTeaching.Screen.GroupScreen.Controlbar",
+        "window": {
+            "type": "MAIN",
+            "size": "CONTROLBAR"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Screen.GroupScreen",
+        "isCloseOther": true,
+        "moduleId": "screen"
+    },
+    {
+        "id": "ClassroomTeaching.Screen.GroupScreen.FullScreen",
+        "window": {
+            "type": "MAIN",
+            "size": "FULL_SCREEN"
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Screen.GroupScreen",
+        "isCloseOther": true,
+        "moduleId": "screen"
+    },
+    {
+        "id": "ClassroomTeaching.Screen.Broadcast",
+        "window": {
+            "type": "BROADCAST",
+            "size": ""
+        },
+        "loadType": "URL",
+        "loadPath": "Entrance.ClassroomTeaching.Screen.Broadcast",
+        "isCloseOther": false,
+        "moduleId": ""
+    }
+]

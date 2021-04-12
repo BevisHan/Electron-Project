@@ -1,0 +1,47 @@
+{
+  "name": "SmartClassroom.Server.Config",
+  "version": "1.0.0",
+  "description": "configTool via electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "init": "npm install --save-dev electron electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "11.1.0",
+    "electron-builder": "22.9.1"
+  },
+  "build": {
+    "appId": "electron-config",
+    "copyright": "Copyright © 2020 lindge",
+    "directories": {
+      "output": "./dist"
+    },
+    "files": [
+      "!cache",
+      "!.data",
+      "!.frontproj",
+      "!ui/*.scss",
+      "!**config.json"
+    ],
+    "extraResources": [
+      {
+        "from": "config.json",
+        "to": "config.json"
+      }
+    ],
+    "win": {
+      "target": "zip",
+      "icon": "ui/Image/屏幕工具.ico"
+    }
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.5",
+    "elementtree": "^0.1.7",
+    "miniserver": "^1.0.3"
+  }
+}

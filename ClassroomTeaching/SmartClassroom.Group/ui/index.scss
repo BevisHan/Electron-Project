@@ -1,0 +1,125 @@
+$sidebar-width: 80px;
+$fold-sidebar-height: 79px;
+$unfold-border-size: 1px;
+$tab-width: $sidebar-width - $unfold-border-size;
+$tab-height: 70px;
+$logon-height: 80px;
+$logon-width: 80px;
+
+body{
+    margin: 0;
+    width: $sidebar-width - $unfold-border-size;
+    height: calc(100vh);
+    overflow: hidden;
+    background: rgba(0,0,0,1);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.unfold-border {
+    border-right: solid $unfold-border-size rgba(71,73,78,1);  
+}
+
+img,
+a {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+.sidebar-unfold-container {
+    width: $sidebar-width;
+    height: 100%;
+    padding-top: 20px;
+
+    .time-container {
+        width: $sidebar-width;
+        height: 33px;
+        text-align: center;
+        bottom: 0px;
+
+        span {
+            color: rgba(255,255,255,1);
+            font-family: Open24DisplaySt;
+            font-weight: regular;
+            font-size: 28px;
+            line-height: normal;
+            letter-spacing: 0px;
+        }
+    }
+
+    .date-container {
+        margin: 20px 0;
+        text-align: center;
+
+        span {
+            color: rgba(255,255,255,1);
+            font-family: PingFang SC;
+            font-weight: regular;
+            font-size: 14px;
+            line-height: normal;
+            letter-spacing: 0px;
+        }
+    }
+
+    .teaching-prepare-container {
+        align-items: center;
+    }        
+
+    .toolbar-container {
+        position: fixed;
+        bottom: 0;
+
+        .teaching-activity-container {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        
+        .tab-container { 
+            width: $tab-width;
+            height: $tab-height;
+            display: flex;
+    
+            .icon-container {
+                margin: auto;
+                text-align: center;
+            }
+    
+            i {
+                color: rgba(173,173,173,1);
+                font-size: 36px;           
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            
+            .executing {
+                color: rgba(255,111,32,1) !important;
+            }
+    
+            .selected {
+                color: rgba(255,255,255,1);
+            }
+        }
+        
+        .tab-container-selected {
+            width: $tab-width;
+            height: $tab-height;
+            background-image: url('image/select-left.png');
+            background-size: $tab-width $tab-height;
+        }
+    }
+}
+
+.logon-container {
+    width: $logon-width;
+    height: $logon-height;
+    display: flex;
+
+    img {
+        margin: auto;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

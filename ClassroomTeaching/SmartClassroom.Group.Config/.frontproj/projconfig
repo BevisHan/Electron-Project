@@ -1,0 +1,11 @@
+{
+  "[version]": "1.0",
+  "name": "Config.Tool",
+  "server": {
+    "port": 12315,
+    "useProfile": true,
+    "useTimestamp": true
+  },
+  "include_files": [],
+  "exclude_files": []
+}
